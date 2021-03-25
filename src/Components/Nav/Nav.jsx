@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-
+import React, { Component } from 'react'; 
 class Nav extends Component {
     constructor(props) {
         super(props);
@@ -27,3 +26,4 @@ class Nav extends Component {
 }
  
 export default Nav;
+

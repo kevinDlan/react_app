@@ -17,6 +17,20 @@ class Main extends Component {
         console.log(this.state.checked, 'check');
     }
 
+    search = (e)=>{
+      console.log(this.state.Data);
+      if(this.state.Data ==='') return alert('Veuillez entrer un nom d\'utilisateur valide');
+      if(this.state.checked){
+        this.props.history.push({
+          pathname: `/Specific/${this.state.Data}`,
+        })
+      }else{
+        this.props.history.push({
+          pathname: `/Data/${this.state.Data}`,
+        })
+      }
+    }
+
 
     render() { 
         return (
@@ -62,7 +76,10 @@ class Main extends Component {
                             onChange={(e)=>{this.setState({[e.target.name]: e.target.value})}}
                           />
                           <span>
-                            <button className="btn btn-outline-primary">
+                            <button
+                             className="btn btn-outline-primary"
+                             onClick={this.search}
+                             >
                               Search
                             </button>
                           </span>

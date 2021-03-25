@@ -1,7 +1,10 @@
 import React,{Component} from 'react';
 import './App.css'
 import Nav from './Components/Nav/Nav';
+import Data from './Components/GitHub/Data';
+import Specific from "./Components/GitHub/Specific";
 import Main from './Components/GitHub/Main';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 
 class App extends Component{
@@ -11,12 +14,16 @@ class App extends Component{
   }
 
   render(){
-    return(
+    return (
       <React.Fragment>
-        <Nav/>
-        <Main/>
+        <Nav />
+        <Router>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/Data/:id" component={Data} />
+          <Route exact path="/Specific/:login" component={Specific} />
+        </Router>
       </React.Fragment>
-    )
+    );
   }
 
 }
