@@ -16,7 +16,7 @@ class Nav extends Component {
                   <i className="fas fa-heart"></i> Favorites
                 </a>
               </nav>
-              <a className="btn btn-outline-primary" href="#">
+              <a className="btn btn-outline-primary" href="https:/google.com">
                 Sign up
               </a>
             </div>
